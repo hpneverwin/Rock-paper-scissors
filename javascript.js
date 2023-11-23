@@ -12,8 +12,17 @@ function playRound(playerSelection,computerSelection){
     } else return "you lose";
 }
 
-const playerSelection = "rock";
+function game(){
+    for (let i = 0 ; i < 5; i++){
+        const playerSelection = prompt("Please input your choice");
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection,computerSelection));
+    }
+}
+
+const playerSelection = prompt("Please input your choice");
 const computerSelection = getComputerChoice();
 console.log("Player: " + playerSelection);
 console.log("Computer: " + computerSelection);
 console.log(playRound(playerSelection,computerSelection));
+console.log(game());
